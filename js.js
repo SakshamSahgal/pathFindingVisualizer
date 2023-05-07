@@ -1,4 +1,3 @@
-
 //=========================================================================
 let main = document.querySelector(".main");
 let rowcount = 26;
@@ -146,7 +145,7 @@ async function Dijkstra(i, j,idprev) {
     
     let id = "" + i + ',' + j;
     queue=[id];
-    let visit = {};
+    let visit = {}; 
     let weight=[1];
     while(queue!=[]){
         let [row,col] = queue.shift().split(",");
@@ -185,8 +184,10 @@ async function Dijkstra(i, j,idprev) {
             }
             
         }
+
         row=row-1;
         col=col+1;
+
         if (!(col >= columncount || row >= rowcount || col < 0 || row < 0)) {
             temp_id = "" + row + ',' +col;
             if (!(temp_id in visit)) {
@@ -243,6 +244,7 @@ function Solve() {
         Dijkstra(arr[0], arr[1],id);
     }  
 }
+
 //=========================================================================
 for (let i = 0; i < rowcount; i++) {
     let row = document.createElement("div");
