@@ -140,7 +140,10 @@ async function dfs(i, j,idprev) {
     return 1;
 }
 
+
 //dijkstra=========================================================================
+
+
 async function Dijkstra(i, j,idprev) {
     
     let id = "" + i + ',' + j;
