@@ -57,7 +57,7 @@ async function bfs(i, j,idprev) {
     path[id]=idprev;
     if (document.getElementById(id).classList.contains("enderblock")) {
         solved = true;
-        document.getElementById("Status").innerHTML = "dONE";
+        document.getElementById("Status").innerHTML = "DONE";
         let nex=id;
         console.log(path);
         while(nex!=path[nex]){
@@ -154,7 +154,7 @@ async function Dijkstra(i, j,idprev) {
         visit[id] = 1;        
         if(document.getElementById(id).classList.contains("enderblock")){
             solved=true;
-            document.getElementById("Status").innerHTML = "dONE";
+            document.getElementById("Status").innerHTML = "DONE";
             break;
         }
         if (document.getElementById(id).classList.contains("borderblock")||document.getElementById(id).classList.contains("solblock")) {
